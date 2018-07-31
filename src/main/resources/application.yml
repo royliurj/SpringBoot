@@ -1,29 +1,34 @@
 server:
   port: 8081
+spring:
+  profiles:
+    active: dev1
+  config:
+    location: G:/application.properties
 
-friends:
-  lastName: zhangsan
-  age: 22
 
-friends2: {lastName: zhangsan, age: 22}
+person:
+  name: roy${random.int}
+  boss: false
+  birth: 2017/01/01
+  maps: {k1: v1, k2: 12}
+  lists:
+    - lisi
+    - zhangsan
+    - wangwu
+  dog:
+    name: ${person.name}'s dog
+    age: 3
+  age: 33
 
-pets:
-  - cat
-  - dog
-  - pig
+---
+server:
+  port: 8082
+spring:
+  profiles: dev1
 
-pets2: [cat, dog, pig]
-
-#person:
-#  name: roy
-#  boss: false
-#  birth: 2017/01/01
-#  maps: {k1: v1, k2: 12}
-#  lists:
-#    - lisi
-#    - zhangsan
-#    - wangwu
-#  dog:
-#    name: wangwang
-#    age: 3
-#  age: 33
+---
+server:
+  port: 8084
+spring:
+  profiles: prod1
