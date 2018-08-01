@@ -1,8 +1,5 @@
 server:
-  port: 8081
-spring:
-  profiles:
-    active: dev1
+  port: 8080
   config:
     location: G:/application.properties
   http:
@@ -26,7 +23,7 @@ person:
   age: 33
 
 #开启SpringBoot的debug模式
-debug: true
+#debug: true
 
 
 ---
