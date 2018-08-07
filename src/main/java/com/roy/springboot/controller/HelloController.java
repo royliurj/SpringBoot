@@ -31,4 +31,10 @@ public class HelloController {
         //classpath:templates/success.html
         return "success";
     }
+
+//    //第一种方式，访问主页面，index.html必须放到templates文件夹下，返回值会按照规则拼接到具体到页面 templates/"返回值".html
+//    @RequestMapping({"/","/index.html"})
+//    public String index(){
+//        return "index";
+//    }
 }

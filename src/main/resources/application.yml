@@ -7,7 +7,6 @@ server:
       enabled: true
       charset: utf-8
 
-
 person:
   name: roy${random.int}
   boss: false
@@ -21,6 +20,14 @@ person:
     name: ${person.name}'s dog
     age: 3
   age: 33
+
+spring:
+  messages:
+    basename: i18n.index
+#  禁用thymeleaf缓存
+  thymeleaf:
+    cache: false
+
 
 #开启SpringBoot的debug模式
 #debug: true
