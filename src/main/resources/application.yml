@@ -27,6 +27,9 @@ spring:
 #  禁用thymeleaf缓存
   thymeleaf:
     cache: false
+  mvc:
+    date-format: yyyy-MM-dd
+
 
 
 #开启SpringBoot的debug模式
