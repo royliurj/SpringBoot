@@ -23,15 +23,15 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
     @Bean
     public WebMvcConfigurerAdapter webMvcConfigurerAdapter(){
         WebMvcConfigurerAdapter adapter = new WebMvcConfigurerAdapter(){
-            //注册拦截器
-            @Override
-            public void addInterceptors(InterceptorRegistry registry) {
-                //静态资源：css，js
-                //SpringBoot已经做好了静态资源到映射
-                registry.addInterceptor(new LoginHandlerInterceptor())
-                        .addPathPatterns("/**")
-                        .excludePathPatterns("/index.html","/","/user/login");
-            }
+//            //注册拦截器
+//            @Override
+//            public void addInterceptors(InterceptorRegistry registry) {
+//                //静态资源：css，js
+//                //SpringBoot已经做好了静态资源到映射
+//                registry.addInterceptor(new LoginHandlerInterceptor())
+//                        .addPathPatterns("/**")
+//                        .excludePathPatterns("/index.html","/","/user/login");
+//            }
 
             //注册视图解析器
             @Override

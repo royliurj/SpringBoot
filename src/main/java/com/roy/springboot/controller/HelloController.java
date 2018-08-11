@@ -1,9 +1,11 @@
 package com.roy.springboot.controller;
 
+import com.roy.springboot.exception.UserNotExistException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.lang.reflect.Array;
@@ -18,7 +20,12 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping("/hello")
-    public String hello(){
+    public String hello(@RequestParam("user") String user)
+    {
+        if(user.equals("aaa")){
+            throw new UserNotExistException();
+        }
+
         return "Hello " + name;
     }
 
