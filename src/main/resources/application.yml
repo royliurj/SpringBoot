@@ -8,6 +8,7 @@ server:
       charset: utf-8
 
 
+
 person:
   name: roy${random.int}
   boss: false
@@ -30,6 +31,10 @@ spring:
     cache: false
   mvc:
     date-format: yyyy-MM-dd
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
 
 
 
